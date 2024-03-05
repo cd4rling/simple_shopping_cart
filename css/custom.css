@@ -1,0 +1,26 @@
+body {
+    background-color: #161616;
+    background-image: url(../img/cart_edit.jpg);
+    background-size: 40%;
+    opacity: .8;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    color: white;
+    min-height: 100vh;
+}
+
+input {
+    width: 70px;
+    background-color: darkgrey;
+}
+
+table {
+    width: 100%;
+}
+
+.container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 10;
+    
+}
