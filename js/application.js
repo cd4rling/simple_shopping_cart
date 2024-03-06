@@ -1,12 +1,21 @@
 var updateTotalPrice = function (ele) {
     var itemPrice = parseFloat($(ele).find('.price').text().replace('$', ''));
-    var itemQuantity = parseFloat($(ele).find('.quantity input').val());
-  
+    var $quantityInput = $(ele).find('.quantity input');
+    var itemQuantity = parseFloat($quantityInput.val());
+
+    if (isNaN(itemQuantity) || itemQuantity < 0) {
+        // Set itemQuantity to 0
+        itemQuantity = 0;
+
+        // Update the input field value to 0
+        $quantityInput.val(itemQuantity);
+    }
+
     var totalPrice = itemPrice * itemQuantity;
     $(ele).children('.totalPrice').html(totalPrice);
-  
+
     return totalPrice;
-  }
+}
 
 var sum = function (acc, x) { return acc + x; };
 
